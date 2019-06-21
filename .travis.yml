@@ -6,4 +6,4 @@ before_install:
   - docker build -t hugorla/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run hugorla/docker-react npm run test -- --coverage
+  - docker run -e CI=true hugorla/docker-react npm run test -- --coverage
